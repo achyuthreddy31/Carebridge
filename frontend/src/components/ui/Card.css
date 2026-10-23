@@ -1,0 +1,56 @@
+.curasync-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+/* Padding variants */
+.curasync-card--pad-none { padding: 0; }
+.curasync-card--pad-sm { padding: var(--space-3); }
+.curasync-card--pad-md { padding: var(--space-5); }
+.curasync-card--pad-lg { padding: var(--space-8); }
+
+/* Appearance Variants */
+.curasync-card--default {
+  box-shadow: var(--shadow-sm);
+}
+
+.curasync-card--elevated {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(15, 43, 70, 0.08);
+}
+
+.curasync-card--bordered {
+  box-shadow: none;
+  border: 1.5px solid var(--color-border);
+}
+
+.curasync-card--interactive {
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+
+.curasync-card--interactive:hover,
+.curasync-card--clickable:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.curasync-card--primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-primary-light);
+}
+
+.curasync-card--accent-tint {
+  background-color: var(--color-accent-subtle);
+  border-color: rgba(42, 157, 143, 0.3);
+}
+
+.curasync-card--privacy-tint {
+  background-color: var(--color-privacy-bg);
+  border-color: var(--color-privacy-border);
+}

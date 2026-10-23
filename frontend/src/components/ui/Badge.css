@@ -1,0 +1,70 @@
+.curasync-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.curasync-badge--sm {
+  padding: 0.2rem 0.5rem;
+  font-size: var(--font-size-xs);
+}
+
+.curasync-badge--md {
+  padding: 0.35rem 0.75rem;
+  font-size: var(--font-size-sm);
+}
+
+.curasync-badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* Status variants */
+.curasync-badge--success {
+  background-color: var(--color-success-bg);
+  color: #065F46;
+  border: 1px solid var(--color-success-border);
+}
+
+.curasync-badge--warning {
+  background-color: var(--color-warning-bg);
+  color: #92400E;
+  border: 1px solid var(--color-warning-border);
+}
+
+.curasync-badge--urgent,
+.curasync-badge--error {
+  background-color: var(--color-error-bg);
+  color: #991B1B;
+  border: 1px solid var(--color-error-border);
+}
+
+.curasync-badge--info {
+  background-color: var(--color-info-bg);
+  color: #1E40AF;
+  border: 1px solid var(--color-info-border);
+}
+
+.curasync-badge--privacy {
+  background-color: var(--color-privacy-bg);
+  color: #5B21B6;
+  border: 1px solid var(--color-privacy-border);
+}
+
+.curasync-badge--neutral {
+  background-color: var(--color-surface-alt);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.curasync-badge--primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+}

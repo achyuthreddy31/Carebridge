@@ -1,0 +1,57 @@
+.curasync-readonly-banner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  background-color: #FEF3C7;
+  border: 1.5px solid #FCD34D;
+  border-radius: var(--radius-lg);
+  color: #92400E;
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 640px) {
+  .curasync-readonly-banner {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.curasync-readonly-banner--expired {
+  background-color: var(--color-error-bg);
+  border-color: var(--color-error-border);
+  color: #991B1B;
+}
+
+.curasync-readonly-banner__left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.curasync-readonly-banner__lock {
+  flex-shrink: 0;
+}
+
+.curasync-readonly-banner__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.curasync-readonly-banner__time strong {
+  color: var(--color-primary);
+  font-size: var(--font-size-base);
+}
+
+.curasync-readonly-banner__time--expired {
+  font-weight: 800;
+  color: var(--color-error);
+}

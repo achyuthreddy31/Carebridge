@@ -1,0 +1,101 @@
+.curasync-auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 10%, #E8F6F4 0%, #F8F9FA 60%);
+  padding: var(--space-4);
+}
+
+.curasync-auth-card {
+  width: 100%;
+  max-width: 440px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-xl);
+}
+
+.curasync-auth-card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.curasync-auth-card__title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-top: var(--space-4);
+  letter-spacing: -0.01em;
+}
+
+.curasync-auth-card__subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-1);
+}
+
+.curasync-auth-demo-box {
+  background-color: #F0FDF4;
+  border: 1px dashed #86EFAC;
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  margin-bottom: var(--space-4);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.curasync-auth-demo-box:hover {
+  background-color: #DCFCE7;
+  transform: translateY(-1px);
+}
+
+.curasync-auth-demo-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #16A34A;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.curasync-auth-demo-box p {
+  font-size: var(--font-size-xs);
+  color: #15803D;
+}
+
+.curasync-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.curasync-auth-footer {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-light);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.curasync-auth-link {
+  color: var(--color-accent-dark);
+  font-weight: 600;
+}
+
+.curasync-auth-doctor-link-wrap {
+  margin-top: var(--space-3);
+}
+
+.curasync-auth-doctor-link {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-primary);
+}

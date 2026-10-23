@@ -1,0 +1,130 @@
+.curasync-token-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.curasync-token-card--active {
+  box-shadow: var(--shadow-glow-privacy);
+}
+
+.curasync-token-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.curasync-token-card__eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-privacy);
+  text-transform: uppercase;
+}
+
+.curasync-token-card__title {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-top: 2px;
+}
+
+.curasync-token-card__digits-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) 0;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-privacy-border);
+}
+
+.curasync-token-card__digit {
+  width: 44px;
+  height: 54px;
+  background-color: #FAF5FF;
+  border: 1.5px solid var(--color-privacy);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-privacy);
+  font-variant-numeric: tabular-nums;
+  box-shadow: var(--shadow-sm);
+}
+
+.curasync-token-card__meta-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--font-size-sm);
+}
+
+.curasync-token-card__timer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.curasync-token-card__clock-icon {
+  color: var(--color-warning);
+}
+
+.curasync-token-card__uses {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.curasync-token-card__scope {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+}
+
+.curasync-token-card__scope-label {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.curasync-token-card__scope-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.curasync-token-card__scope-tag {
+  background-color: var(--color-surface-alt);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  color: var(--color-primary);
+  text-transform: capitalize;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.curasync-token-card__footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border-light);
+}
+
+@media (min-width: 640px) {
+  .curasync-token-card__footer {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.curasync-token-card__hint {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}

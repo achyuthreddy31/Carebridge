@@ -1,0 +1,134 @@
+.curasync-access-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.curasync-access-timeline__entry {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  position: relative;
+}
+
+.curasync-access-timeline__date-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-privacy);
+  width: 60px;
+  padding-top: var(--space-2);
+  flex-shrink: 0;
+  text-align: right;
+  letter-spacing: 0.05em;
+}
+
+.curasync-access-timeline__node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.curasync-access-timeline__bullet {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-privacy-bg);
+  color: var(--color-privacy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-privacy-border);
+  z-index: 2;
+}
+
+.curasync-access-timeline__connector {
+  position: absolute;
+  top: 32px;
+  bottom: -32px;
+  width: 2px;
+  background-color: var(--color-border);
+  z-index: 1;
+}
+
+.curasync-access-timeline__card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.curasync-access-timeline__doctor-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.curasync-access-timeline__doctor-name {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.curasync-access-timeline__clinic {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+.curasync-access-timeline__time {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.curasync-access-timeline__resources {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.curasync-access-timeline__viewed-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.curasync-access-timeline__resource-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.curasync-access-timeline__resource-chip {
+  font-size: var(--font-size-xs);
+  padding: 2px 8px;
+  background-color: var(--color-surface-alt);
+  border-radius: var(--radius-sm);
+  color: var(--color-primary);
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+}
+
+.curasync-access-timeline__audit-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  color: var(--color-accent-dark);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.curasync-access-timeline__audit-icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}

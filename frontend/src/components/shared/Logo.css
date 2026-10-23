@@ -1,0 +1,63 @@
+.curasync-logo-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.curasync-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  user-select: none;
+}
+
+.curasync-logo__mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.curasync-logo--sm .curasync-logo__svg { width: 26px; height: 26px; }
+.curasync-logo--md .curasync-logo__svg { width: 34px; height: 34px; }
+.curasync-logo--lg .curasync-logo__svg { width: 44px; height: 44px; }
+
+.curasync-logo__text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.curasync-logo__brand {
+  font-family: var(--font-family-base);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.curasync-logo--sm .curasync-logo__brand { font-size: 1.1rem; }
+.curasync-logo--md .curasync-logo__brand { font-size: 1.4rem; }
+.curasync-logo--lg .curasync-logo__brand { font-size: 1.85rem; }
+
+.curasync-logo__sync {
+  color: var(--color-accent);
+}
+
+.curasync-logo--light .curasync-logo__brand {
+  color: #FFFFFF;
+}
+
+.curasync-logo--light .curasync-logo__sync {
+  color: var(--color-mint);
+}
+
+.curasync-logo__tagline {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+.curasync-logo--light .curasync-logo__tagline {
+  color: var(--color-mint);
+}

@@ -1,0 +1,19 @@
+.curasync-skeleton {
+  background: linear-gradient(
+    90deg,
+    #F1F5F9 0%,
+    #E2E8F0 50%,
+    #F1F5F9 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-sm);
+}
+
+.curasync-skeleton--circle {
+  border-radius: 50%;
+}
+
+.curasync-skeleton--card {
+  border-radius: var(--radius-lg);
+}

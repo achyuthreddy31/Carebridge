@@ -1,0 +1,79 @@
+.curasync-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  width: 100%;
+}
+
+.curasync-input-label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.curasync-input-required {
+  color: var(--color-error);
+}
+
+.curasync-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.curasync-input-icon {
+  position: absolute;
+  left: var(--space-3);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.curasync-input {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  font-size: var(--font-size-base);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  transition: all var(--transition-fast);
+}
+
+.curasync-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.15);
+  outline: none;
+}
+
+.curasync-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.curasync-input--with-icon {
+  padding-left: 2.4rem;
+}
+
+.curasync-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.curasync-input-group--error .curasync-input {
+  border-color: var(--color-error);
+}
+
+.curasync-input-group--error .curasync-input:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+.curasync-input-error {
+  font-size: var(--font-size-xs);
+  color: var(--color-error);
+  font-weight: 500;
+}
+
+.curasync-input-helper {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}

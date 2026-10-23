@@ -1,0 +1,82 @@
+.curasync-header {
+  height: var(--header-height);
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.curasync-header__inner {
+  height: 100%;
+  padding: 0 var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.curasync-header__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.curasync-header__user-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.curasync-header__user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.curasync-header__user-name {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.curasync-nav-role {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  margin-top: 2px;
+}
+
+.curasync-nav-role--patient {
+  background-color: var(--color-accent-subtle);
+  color: var(--color-accent-dark);
+}
+
+.curasync-nav-role--doctor {
+  background-color: #E0F2FE;
+  color: #0369A1;
+}
+
+.curasync-nav-role--admin {
+  background-color: #EDE9FE;
+  color: #6D28D9;
+}
+
+.curasync-header__logout-btn {
+  color: var(--color-text-muted);
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.curasync-header__logout-btn:hover {
+  color: var(--color-error);
+  background-color: var(--color-error-bg);
+}

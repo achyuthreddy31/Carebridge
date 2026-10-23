@@ -1,0 +1,37 @@
+.curasync-page-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+}
+
+.curasync-page-layout__main {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+.curasync-page-layout__content {
+  flex: 1;
+  padding-bottom: calc(var(--bottom-nav-height) + var(--space-8));
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@media (min-width: 1024px) {
+  .curasync-page-layout__content {
+    padding-bottom: var(--space-12);
+  }
+}
+
+.curasync-page-layout__content-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .curasync-page-layout__content-inner {
+    padding: var(--space-6) var(--space-8);
+  }
+}

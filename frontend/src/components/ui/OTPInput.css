@@ -1,0 +1,43 @@
+.curasync-otp-container {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin: var(--space-4) 0;
+}
+
+.curasync-otp-box {
+  width: 48px;
+  height: 56px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+@media (min-width: 480px) {
+  .curasync-otp-box {
+    width: 54px;
+    height: 64px;
+    font-size: 1.75rem;
+    gap: var(--space-3);
+  }
+}
+
+.curasync-otp-box:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 4px rgba(42, 157, 143, 0.18);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.curasync-otp-container--error .curasync-otp-box {
+  border-color: var(--color-error);
+}
+
+.curasync-otp-container--error .curasync-otp-box:focus {
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.18);
+}

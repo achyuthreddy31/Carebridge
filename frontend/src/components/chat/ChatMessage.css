@@ -1,0 +1,99 @@
+.curasync-chat-msg {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  max-width: 85%;
+}
+
+.curasync-chat-msg--assistant {
+  align-self: flex-start;
+}
+
+.curasync-chat-msg--user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.curasync-chat-msg__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.curasync-chat-msg--assistant .curasync-chat-msg__avatar {
+  background-color: var(--color-surface);
+  border: 1.5px solid var(--color-accent);
+  color: var(--color-accent-dark);
+}
+
+.curasync-chat-msg--user .curasync-chat-msg__avatar {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.curasync-chat-msg__bubble-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.curasync-chat-msg--user .curasync-chat-msg__bubble-wrap {
+  align-items: flex-end;
+}
+
+.curasync-chat-msg__bubble {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  box-shadow: var(--shadow-sm);
+}
+
+.curasync-chat-msg--assistant .curasync-chat-msg__bubble {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-top-left-radius: 2px;
+}
+
+.curasync-chat-msg--user .curasync-chat-msg__bubble {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-top-right-radius: 2px;
+}
+
+.curasync-chat-msg__bubble--red-flag {
+  border-color: var(--color-error) !important;
+  background-color: var(--color-error-bg) !important;
+}
+
+.curasync-chat-msg__red-flag-notice {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: #991B1B;
+  font-weight: 700;
+  font-size: var(--font-size-xs);
+  padding-bottom: var(--space-2);
+  margin-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-error-border);
+}
+
+.curasync-chat-msg__text p {
+  margin-bottom: var(--space-2);
+}
+
+.curasync-chat-msg__text p:last-child {
+  margin-bottom: 0;
+}
+
+.curasync-chat-msg__time {
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+  padding: 0 4px;
+}

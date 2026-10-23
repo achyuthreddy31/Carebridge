@@ -1,0 +1,108 @@
+.curasync-sidebar {
+  width: var(--sidebar-width);
+  height: calc(100vh - var(--header-height));
+  background-color: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  top: var(--header-height);
+  padding: var(--space-4) var(--space-3);
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1023px) {
+  .curasync-sidebar {
+    display: none;
+  }
+}
+
+.curasync-sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.curasync-sidebar__section-heading {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  padding: var(--space-3) var(--space-3) var(--space-1) var(--space-3);
+  text-transform: uppercase;
+}
+
+.curasync-sidebar__link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 0.65rem var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.curasync-sidebar__link:hover {
+  background-color: var(--color-surface-alt);
+  color: var(--color-primary);
+}
+
+.curasync-sidebar__link--active {
+  background-color: var(--color-accent-subtle);
+  color: var(--color-accent-dark);
+  font-weight: 600;
+}
+
+.curasync-sidebar__link--active .curasync-sidebar__icon {
+  color: var(--color-accent);
+}
+
+.curasync-sidebar__badge {
+  margin-left: auto;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  background-color: var(--color-mint);
+  color: var(--color-primary-dark);
+  border-radius: var(--radius-full);
+}
+
+.curasync-sidebar__footer {
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.curasync-sidebar__privacy-guarantee {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background-color: var(--color-privacy-bg);
+  border: 1px solid var(--color-privacy-border);
+  border-radius: var(--radius-md);
+}
+
+.curasync-sidebar__shield {
+  color: var(--color-privacy);
+  flex-shrink: 0;
+}
+
+.curasync-sidebar__guarantee-text {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-xs);
+}
+
+.curasync-sidebar__guarantee-text strong {
+  color: var(--color-primary);
+}
+
+.curasync-sidebar__guarantee-text span {
+  color: var(--color-text-secondary);
+  font-size: 0.7rem;
+}

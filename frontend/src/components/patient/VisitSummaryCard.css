@@ -1,0 +1,168 @@
+.curasync-visit-summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.curasync-visit-summary__disclaimer-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-surface-alt);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.curasync-visit-summary__shield-icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.curasync-visit-summary__disclaimer-text strong {
+  color: var(--color-primary);
+  display: block;
+}
+
+.curasync-visit-summary__red-flags {
+  padding: var(--space-4);
+  background-color: var(--color-error-bg);
+  border: 1.5px solid var(--color-error-border);
+  border-radius: var(--radius-lg);
+}
+
+.curasync-visit-summary__red-flag-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: #991B1B;
+  margin-bottom: var(--space-1);
+}
+
+.curasync-visit-summary__red-flag-header h4 {
+  font-size: var(--font-size-sm);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.curasync-visit-summary__warning-icon {
+  color: var(--color-error);
+}
+
+.curasync-visit-summary__red-flag-sub {
+  font-size: var(--font-size-xs);
+  color: #7F1D1D;
+  margin-bottom: var(--space-2);
+}
+
+.curasync-visit-summary__red-flag-list {
+  padding-left: var(--space-4);
+  font-size: var(--font-size-xs);
+  color: #991B1B;
+}
+
+.curasync-visit-summary__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.curasync-visit-summary__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.curasync-visit-summary__grid-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  padding: var(--space-3) 0;
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+@media (min-width: 640px) {
+  .curasync-visit-summary__grid-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.curasync-visit-summary__label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+  display: block;
+}
+
+.curasync-visit-summary__value {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.curasync-visit-summary__value--primary {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.curasync-visit-summary__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.curasync-visit-summary__tag {
+  font-size: var(--font-size-xs);
+  padding: 2px 8px;
+  background-color: var(--color-surface-alt);
+  border-radius: var(--radius-sm);
+  color: var(--color-primary);
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+}
+
+.curasync-visit-summary__tag--alert {
+  background-color: var(--color-error-bg);
+  border-color: var(--color-error-border);
+  color: #991B1B;
+  font-weight: 600;
+}
+
+.curasync-visit-summary__muted {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.curasync-visit-summary__patient-words {
+  background-color: #F8FAFC;
+  border-left: 3px solid var(--color-primary);
+  padding: var(--space-3) var(--space-4);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-top: var(--space-2);
+}
+
+.curasync-visit-summary__patient-words-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.curasync-visit-summary__patient-quote {
+  font-size: var(--font-size-sm);
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
