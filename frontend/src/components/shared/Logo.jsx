@@ -17,7 +17,7 @@ export const Logo = ({ size = 'md', to = '/', showTagline = false, theme = 'dark
       </div>
       <div className="curasync-logo__text-group">
         <span className="curasync-logo__brand">
-          Cura<span className="curasync-logo__sync">sync</span>
+          Care<span className="curasync-logo__sync">bridge</span>
         </span>
         {showTagline && (
           <span className="curasync-logo__tagline">Clinical Intelligence</span>

@@ -9,6 +9,23 @@
   display: flex;
   position: relative;
   margin-bottom: var(--space-6);
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .curasync-timeline__date-node {
+    width: 42px;
+  }
+  .curasync-timeline__day {
+    font-size: 1.05rem;
+  }
+  .curasync-timeline__axis {
+    width: 24px;
+  }
+  .curasync-timeline__card {
+    padding: var(--space-3) var(--space-3) !important;
+    margin-left: 4px !important;
+  }
 }
 
 .curasync-timeline__date-node {

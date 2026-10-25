@@ -45,7 +45,7 @@ export const PatientRegister = () => {
         gender: formData.gender,
         email: formData.email || null,
       });
-      addToast('Account created successfully! Welcome to Curasync.', 'success');
+      addToast('Account created successfully! Welcome to Carebridge.', 'success');
       navigate('/patient/dashboard');
     } catch (err) {
       const msg = err.response?.data?.detail || 'Registration failed. Mobile may already exist.';

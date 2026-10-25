@@ -14,6 +14,7 @@ import {
 import { DoctorLayout } from '../../components/layout/DoctorLayout';
 import { ReadOnlyBanner } from '../../components/doctor/ReadOnlyBanner';
 import { VisitSummaryCard } from '../../components/patient/VisitSummaryCard';
+import { PrecautionGuidanceCard } from '../../components/patient/PrecautionGuidanceCard';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
@@ -167,11 +168,18 @@ export const DoctorPatientWorkspace = () => {
       {activeTab === 'summary' && (
         <div>
           {visit?.summary ? (
-            <VisitSummaryCard
-              summary={visit.summary}
-              redFlags={visit.red_flags}
-              patientDescription={visit.summary.patient_own_description}
-            />
+            <>
+              <VisitSummaryCard
+                summary={visit.summary}
+                redFlags={visit.red_flags}
+                patientDescription={visit.summary.patient_own_description}
+              />
+              {(visit.precautions || visit.summary.precautions) && (
+                <PrecautionGuidanceCard
+                  precautions={visit.precautions || visit.summary.precautions}
+                />
+              )}
+            </>
           ) : (
             <Card variant="bordered" padding="lg">
               <p className="curasync-muted-text">No active consultation intake recorded for this patient.</p>
@@ -224,38 +232,40 @@ export const DoctorPatientWorkspace = () => {
         <Card variant="bordered" padding="lg">
           <h3 className="curasync-card-heading">All Permitted Numerical Lab Parameters</h3>
           <p className="curasync-card-sub" style={{ marginBottom: '1rem' }}>
-            Extracted from shared pathology reports through Curasync clinical document intelligence.
+            Extracted from shared pathology reports through Carebridge clinical document intelligence.
           </p>
 
-          <table className="curasync-table">
-            <thead>
-              <tr>
-                <th>Test Name</th>
-                <th>Observed Value</th>
-                <th>Unit</th>
-                <th>Standard Range</th>
-                <th>Interpretation</th>
-              </tr>
-            </thead>
-            <tbody>
-              {reports.flatMap((r) => r.extraction?.extracted_data || []).map((item, idx) => (
-                <tr key={idx}>
-                  <td><strong>{item.test_name}</strong></td>
-                  <td style={{ fontWeight: '700', color: 'var(--color-primary)' }}>{item.value}</td>
-                  <td>{item.unit}</td>
-                  <td>{item.reference_range}</td>
-                  <td>
-                    <Badge
-                      variant={item.status === 'normal' ? 'success' : item.status === 'high' ? 'warning' : 'info'}
-                      size="sm"
-                    >
-                      {item.status.toUpperCase()}
-                    </Badge>
-                  </td>
+          <div className="curasync-table-container">
+            <table className="curasync-table">
+              <thead>
+                <tr>
+                  <th>Test Name</th>
+                  <th>Observed Value</th>
+                  <th>Unit</th>
+                  <th>Standard Range</th>
+                  <th>Interpretation</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {reports.flatMap((r) => r.extraction?.extracted_data || []).map((item, idx) => (
+                  <tr key={idx}>
+                    <td><strong>{item.test_name}</strong></td>
+                    <td style={{ fontWeight: '700', color: 'var(--color-primary)' }}>{item.value}</td>
+                    <td>{item.unit}</td>
+                    <td>{item.reference_range}</td>
+                    <td>
+                      <Badge
+                        variant={item.status === 'normal' ? 'success' : item.status === 'high' ? 'warning' : 'info'}
+                        size="sm"
+                      >
+                        {item.status.toUpperCase()}
+                      </Badge>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </Card>
       )}
     </DoctorLayout>

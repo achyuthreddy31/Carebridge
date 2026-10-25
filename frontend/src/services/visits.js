@@ -28,4 +28,13 @@ export const visitService = {
     const res = await api.post(`/visits/${visitId}/complete`);
     return res.data;
   },
+
+  analyzePrecautions: async ({ symptoms, duration = null, severity = null }) => {
+    const res = await api.post('/visits/precautions/analyze', {
+      symptoms,
+      duration,
+      severity,
+    });
+    return res.data;
+  },
 };

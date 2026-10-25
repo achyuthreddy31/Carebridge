@@ -61,7 +61,7 @@ export const ReportUpload = () => {
           <span className="curasync-page-header__eyebrow">SIGNATURE EXPERIENCE 1</span>
           <h1 className="curasync-page-header__title">Upload Diagnostic Report</h1>
           <p className="curasync-page-header__desc">
-            Upload PDF or image pathology investigations. The Curasync pipeline extracts clinical values, reference ranges, and indexes them into your health wallet.
+            Upload PDF or image pathology investigations. The Carebridge pipeline extracts clinical values, reference ranges, and indexes them into your health wallet.
           </p>
         </div>
       </div>
@@ -124,7 +124,7 @@ export const ReportUpload = () => {
               <Sparkles size={18} /> Processing Medical Document
             </h3>
             <p className="curasync-upload-pipeline-desc">
-              Parsing {selectedFile?.name || 'document'} through the Curasync OCR and Clinical Extraction engine.
+              Parsing {selectedFile?.name || 'document'} through the Carebridge OCR and Clinical Extraction engine.
             </p>
 
             <ProcessingPipeline currentStatus={status} error={error} />

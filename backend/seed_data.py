@@ -135,7 +135,7 @@ def seed_database():
                 {"test_name": "Total Cholesterol", "value": "182", "unit": "mg/dL", "reference_range": "< 200", "status": "normal"}
             ],
             summary="All 7 extracted clinical parameters fall within physiological normal thresholds.",
-            model_used="Curasync-Clinical-NLP-v2",
+            model_used="Carebridge-Clinical-NLP-v2",
             confidence=0.97
         )
         db.add(sample_extraction)
@@ -170,7 +170,7 @@ def seed_database():
         db.refresh(sample_visit)
 
         chat_data = [
-            ("assistant", "Hello! I am your Curasync Intake Assistant. What is the primary symptom you are experiencing today?", ["Headache", "Cough", "Fever", "Other"]),
+            ("assistant", "Hello! I am your Carebridge Intake Assistant. What is the primary symptom you are experiencing today?", ["Headache", "Cough", "Fever", "Other"]),
             ("user", "I have a recurrent throbbing headache on the right side of my head.", None),
             ("assistant", "How long have you been experiencing this, and did it start suddenly or gradually?", ["Started today", "2 - 3 days", "About 1 week", "Chronic"]),
             ("user", "It started about 4 days ago gradually.", None),

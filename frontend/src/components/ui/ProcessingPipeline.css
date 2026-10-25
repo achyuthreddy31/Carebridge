@@ -74,6 +74,25 @@
   color: var(--color-text);
 }
 
+.curasync-pipeline__icon {
+  flex-shrink: 0;
+}
+
+.curasync-pipeline__icon--done {
+  color: #ffffff;
+}
+
+.curasync-pipeline__icon--dim {
+  color: var(--color-text-muted);
+}
+
+.curasync-pipeline__connector {
+  flex: 1;
+  height: 2px;
+  background-color: var(--color-border);
+  margin: 0 var(--space-2);
+}
+
 .curasync-pipeline__error {
   margin-top: var(--space-3);
   padding: var(--space-2) var(--space-3);

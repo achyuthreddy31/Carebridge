@@ -43,20 +43,23 @@
   background-color: #F0FDF4;
   border: 1px dashed #86EFAC;
   border-radius: var(--radius-md);
-  padding: var(--space-3);
-  margin-bottom: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-5);
   cursor: pointer;
+  text-align: center;
   transition: all var(--transition-fast);
 }
 
 .curasync-auth-demo-box:hover {
   background-color: #DCFCE7;
+  border-color: #4ADE80;
   transform: translateY(-1px);
 }
 
 .curasync-auth-demo-header {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   font-size: 0.68rem;
   font-weight: 800;
@@ -68,6 +71,8 @@
 .curasync-auth-demo-box p {
   font-size: var(--font-size-xs);
   color: #15803D;
+  margin: 0;
+  line-height: 1.45;
 }
 
 .curasync-auth-form {
@@ -99,3 +104,14 @@
   font-weight: 600;
   color: var(--color-primary);
 }
+
+@media (max-width: 480px) {
+  .curasync-auth-page {
+    padding: var(--space-3);
+  }
+  .curasync-auth-card {
+    padding: var(--space-5) var(--space-4);
+    border-radius: var(--radius-lg);
+  }
+}
+

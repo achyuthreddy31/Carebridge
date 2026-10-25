@@ -37,7 +37,7 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
   if (loading) {
     return (
       <div className="curasync-app-loader">
-        <div className="curasync-app-loader__spin">Loading Curasync...</div>
+        <div className="curasync-app-loader__spin">Loading Carebridge...</div>
       </div>
     );
   }

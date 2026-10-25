@@ -71,7 +71,7 @@ async def upload_medical_report(
             report_id=report.id,
             extracted_data=extraction_res.get("extracted_data", []),
             summary=extraction_res.get("summary", "Extracted laboratory report findings."),
-            model_used=extraction_res.get("model_used", "Curasync-Clinical-NLP"),
+            model_used=extraction_res.get("model_used", "Carebridge-Clinical-NLP"),
             confidence=extraction_res.get("confidence", 0.95)
         )
         db.add(extraction)

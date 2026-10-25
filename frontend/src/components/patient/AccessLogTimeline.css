@@ -62,8 +62,15 @@
 
 .curasync-access-timeline__doctor-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.curasync-access-timeline__doctor-info {
+  display: flex;
+  flex-direction: column;
 }
 
 .curasync-access-timeline__doctor-name {

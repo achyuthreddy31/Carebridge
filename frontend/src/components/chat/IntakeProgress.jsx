@@ -14,12 +14,12 @@ const INTAKE_STEPS = [
   { id: 'complete', label: 'Structured Summary' },
 ];
 
-export const IntakeProgress = ({ currentStep = 'chief_complaint' }) => {
+export const IntakeProgress = ({ currentStep = 'chief_complaint', variant = 'horizontal' }) => {
   const currentIndex = INTAKE_STEPS.findIndex((s) => s.id === currentStep);
   const activeIdx = currentIndex === -1 ? 0 : currentIndex;
 
   return (
-    <div className="curasync-intake-progress">
+    <div className={`curasync-intake-progress curasync-intake-progress--${variant}`}>
       <div className="curasync-intake-progress__header">
         <span className="curasync-intake-progress__eyebrow">CONSULTATION PREPARATION</span>
         <h4 className="curasync-intake-progress__title">Intake Milestones</h4>

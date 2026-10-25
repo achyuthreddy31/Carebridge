@@ -36,6 +36,13 @@
   color: #ffffff;
 }
 
+.curasync-chat-msg__bot-icon,
+.curasync-chat-msg__user-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .curasync-chat-msg__bubble-wrap {
   display: flex;
   flex-direction: column;

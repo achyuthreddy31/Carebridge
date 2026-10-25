@@ -108,13 +108,19 @@ export const ChatWindow = ({
       {/* Chat Input Bar */}
       {!isComplete && (
         <form className="curasync-chat-window__input-bar" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Type your response or select an option above..."
+          <textarea
+            placeholder="Type your response or select an option above (Shift+Enter for newline)..."
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                handleSubmit(e);
+              }
+            }}
             disabled={loading}
-            className="curasync-chat-window__input"
+            rows={2}
+            className="curasync-chat-window__textarea"
           />
           <button
             type="submit"

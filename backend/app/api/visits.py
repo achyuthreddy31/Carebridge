@@ -1,4 +1,5 @@
 import datetime
+from typing import Dict, Any
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from app.database import get_db
@@ -6,12 +7,29 @@ from app.models.user import User
 from app.models.patient import Patient
 from app.models.visit import Visit, ChatMessage
 from app.schemas.visit import (
-    CreateVisitRequest, VisitResponse, ChatMessageRequest, ChatMessageResponse
+    CreateVisitRequest, VisitResponse, ChatMessageRequest, ChatMessageResponse, AnalyzePrecautionsRequest
 )
 from app.auth.rbac import get_current_patient
 from app.services.ai_service import get_ai_service
 
 router = APIRouter(prefix="/visits", tags=["AI Intake & Visits"])
+
+@router.post("/precautions/analyze", response_model=Dict[str, Any])
+async def analyze_symptom_precautions(
+    payload: AnalyzePrecautionsRequest,
+    patient_data: tuple[User, Patient] = Depends(get_current_patient)
+):
+    """
+    Generate personalized pre-consultation precautions based on reported symptoms.
+    Provides conservative safety guidance, what to avoid, emergency screening, and next steps.
+    """
+    ai_svc = get_ai_service()
+    return await ai_svc.generate_precautions(
+        symptoms_text=payload.symptoms,
+        duration=payload.duration,
+        severity=payload.severity
+    )
+
 
 @router.post("", response_model=VisitResponse)
 async def create_new_visit(
@@ -36,7 +54,7 @@ async def create_new_visit(
     db.commit()
     db.refresh(visit)
 
-    # Automatically add initial welcome greeting from Curasync AI Assistant
+    # Automatically add initial welcome greeting from Carebridge AI Assistant
     initial_step = await ai_svc.process_intake_step(
         current_step="start",
         user_message="",
@@ -137,7 +155,11 @@ async def send_intake_message(
         history=history
     )
 
-    # 3. Update red flags on visit if detected
+    # 3. Update red flags and precautions on visit if detected
+    precautions_data = ai_result.get("precautions")
+    if precautions_data:
+        visit.precautions = precautions_data
+
     if ai_result.get("is_red_flag"):
         current_flags = list(visit.red_flags or [])
         current_flags.extend(ai_result.get("red_flags", []))
@@ -156,7 +178,8 @@ async def send_intake_message(
         content=ai_result["response"],
         options=ai_result.get("options", []),
         step=next_step,
-        is_red_flag=ai_result.get("is_red_flag", False)
+        is_red_flag=ai_result.get("is_red_flag", False),
+        precautions=precautions_data
     )
     db.add(assistant_msg)
     db.commit()

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Stethoscope, Lock, KeyRound, ArrowRight, Sparkles, ShieldCheck } from 'lucide-react';
+import { Stethoscope, Lock, KeyRound, ArrowRight, ShieldCheck } from 'lucide-react';
 import { DoctorLayout } from '../../components/layout/DoctorLayout';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
@@ -69,15 +69,11 @@ export const DoctorDashboard = () => {
               <KeyRound size={28} />
             </div>
             <h2>SECURE PATIENT ACCESS</h2>
-            <p>Ask patient for the 6-digit access code from their Curasync wallet</p>
+            <p>Ask patient for the 6-digit access code from their Carebridge wallet</p>
           </div>
 
-          {/* SIH Fast Demo Fill */}
+          {/* Fast Demo Fill */}
           <div className="curasync-auth-demo-box" onClick={handleFillDemoCode} style={{ margin: '1rem 0' }}>
-            <div className="curasync-auth-demo-header">
-              <Sparkles size={14} />
-              <span>SIH DEMO ACTIVE ACCESS CODE</span>
-            </div>
             <p>Click here to auto-fill seeded patient access code: <strong>482910</strong></p>
           </div>
 

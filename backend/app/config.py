@@ -11,7 +11,7 @@ else:
     load_dotenv()
 
 class Settings:
-    APP_NAME: str = os.getenv("APP_NAME", "Curasync")
+    APP_NAME: str = os.getenv("APP_NAME", "Carebridge")
     APP_ENV: str = os.getenv("APP_ENV", "development")
     
     # Database

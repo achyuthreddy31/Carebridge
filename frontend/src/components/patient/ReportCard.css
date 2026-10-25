@@ -22,8 +22,10 @@
   flex-shrink: 0;
 }
 
-.curasync-report-card__icon {
+.curasync-report-card__icon,
+.curasync-report-card__activity-icon {
   color: var(--color-accent);
+  flex-shrink: 0;
 }
 
 .curasync-report-card__meta {

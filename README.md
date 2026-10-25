@@ -1,8 +1,8 @@
-# Curasync
+# Carebridge
 
 **Your health data. Your control. Smarter clinical visits.**
 
-Curasync is a patient-owned, AI-powered clinical intelligence platform that helps patients organize their medical information, prepare for healthcare visits, and securely share selected information with healthcare professionals through temporary patient-controlled access.
+Carebridge is a patient-owned, AI-powered clinical intelligence platform that helps patients organize their medical information, prepare for healthcare visits, and securely share selected information with healthcare professionals through temporary patient-controlled access.
 
 ## Core Innovation
 

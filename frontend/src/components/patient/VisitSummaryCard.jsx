@@ -15,7 +15,7 @@ export const VisitSummaryCard = ({ summary, redFlags = [], patientDescription = 
         <div className="curasync-visit-summary__disclaimer-text">
           <strong>Pre-Consultation Intake Record</strong>
           <span>
-            Verified patient self-reported information organized by Curasync AI. Not a medical diagnosis.
+            Verified patient self-reported information organized by Carebridge AI. Not a medical diagnosis.
           </span>
         </div>
       </div>

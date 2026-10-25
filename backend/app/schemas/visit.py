@@ -14,6 +14,7 @@ class ChatMessageResponse(BaseModel):
     options: Optional[List[str]] = None
     step: Optional[str] = None
     is_red_flag: bool = False
+    precautions: Optional[Dict[str, Any]] = None
     timestamp: datetime
 
     class Config:
@@ -30,6 +31,7 @@ class VisitSummaryContent(BaseModel):
     allergies: List[str] = []
     patient_description: Optional[str] = None
     ai_assessment_notes: Optional[str] = None
+    precautions: Optional[Dict[str, Any]] = None
 
 class VisitResponse(BaseModel):
     id: int
@@ -38,6 +40,7 @@ class VisitResponse(BaseModel):
     status: str
     current_intake_step: str
     summary: Optional[Dict[str, Any]] = None
+    precautions: Optional[Dict[str, Any]] = None
     red_flags: List[Dict[str, Any]] = []
     has_red_flags: bool = False
     created_at: datetime
@@ -46,6 +49,11 @@ class VisitResponse(BaseModel):
 
     class Config:
         from_attributes = True
+
+class AnalyzePrecautionsRequest(BaseModel):
+    symptoms: str
+    duration: Optional[str] = None
+    severity: Optional[str] = None
 
 class CreateVisitRequest(BaseModel):
     title: Optional[str] = "Clinical Consultation Intake"

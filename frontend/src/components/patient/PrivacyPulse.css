@@ -34,6 +34,45 @@
   display: flex;
   align-items: flex-start;
   gap: var(--space-4);
+  flex: 1;
+}
+
+.curasync-privacy-pulse__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.curasync-privacy-pulse__title-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.curasync-privacy-pulse__icon {
+  flex-shrink: 0;
+}
+
+.curasync-privacy-pulse__action {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+  .curasync-privacy-pulse {
+    padding: var(--space-4);
+    gap: var(--space-3);
+  }
+
+  .curasync-privacy-pulse__action {
+    width: 100%;
+  }
+
+  .curasync-privacy-pulse__btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+  }
 }
 
 .curasync-privacy-pulse__beacon {

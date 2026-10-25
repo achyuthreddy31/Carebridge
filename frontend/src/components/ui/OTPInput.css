@@ -1,29 +1,32 @@
 .curasync-otp-container {
   display: flex;
   justify-content: center;
-  gap: var(--space-2);
+  align-items: center;
+  gap: clamp(4px, 1.8vw, 10px);
   margin: var(--space-4) 0;
+  width: 100%;
 }
 
 .curasync-otp-box {
-  width: 48px;
-  height: 56px;
+  width: clamp(38px, 12vw, 52px);
+  height: clamp(48px, 14vw, 62px);
   text-align: center;
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 4.5vw, 1.75rem);
   font-weight: 700;
   color: var(--color-primary);
   background-color: var(--color-surface);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
+  box-sizing: border-box;
+  padding: 0;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 640px) {
   .curasync-otp-box {
     width: 54px;
     height: 64px;
     font-size: 1.75rem;
-    gap: var(--space-3);
   }
 }
 

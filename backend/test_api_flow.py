@@ -172,7 +172,7 @@ if __name__ == "__main__":
     ]
 
     print("\n" + "="*60)
-    print("  CURASYNC SYSTEM VERIFICATION TEST SUITE (SIH 2026)")
+    print("  CAREBRIDGE SYSTEM VERIFICATION TEST SUITE (SIH 2026)")
     print("="*60)
     passed = 0
     failed = 0

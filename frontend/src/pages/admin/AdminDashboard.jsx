@@ -147,7 +147,7 @@ export const AdminDashboard = () => {
               <div className="curasync-status-item">
                 <div>
                   <strong>Clinical NLP & AI Extraction</strong>
-                  <span>Curasync Rule Engine / Gemini Fallback</span>
+                  <span>Carebridge Rule Engine / Gemini Fallback</span>
                 </div>
                 <Badge variant="success" dot size="sm">ACTIVE</Badge>
               </div>
@@ -167,7 +167,7 @@ export const AdminDashboard = () => {
               <ShieldCheck size={20} /> Privacy-by-Design Compliance
             </h3>
             <p style={{ fontSize: '0.875rem', color: 'var(--color-text-secondary)', marginTop: '0.5rem', lineHeight: '1.6' }}>
-              In accordance with Section 49 of the product specification, the Curasync System Admin dashboard has access only to operational metadata (timestamps, IP addresses, token expiration statuses). Clinical content, patient notes, and diagnostic reports remain exclusively encrypted and viewable only by patient authorization.
+              In accordance with Section 49 of the product specification, the Carebridge System Admin dashboard has access only to operational metadata (timestamps, IP addresses, token expiration statuses). Clinical content, patient notes, and diagnostic reports remain exclusively encrypted and viewable only by patient authorization.
             </p>
           </Card>
         </div>
@@ -181,48 +181,50 @@ export const AdminDashboard = () => {
             Inspect registered accounts and manage authorization statuses.
           </p>
 
-          <table className="curasync-table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Contact</th>
-                <th>Role</th>
-                <th>Status</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {users.map((u) => (
-                <tr key={u.id}>
-                  <td>#{u.id}</td>
-                  <td><strong>{u.name}</strong></td>
-                  <td>{u.email || u.phone || 'N/A'}</td>
-                  <td>
-                    <Badge variant={u.role === 'doctor' ? 'info' : u.role === 'admin' ? 'privacy' : 'neutral'} size="sm">
-                      {u.role.toUpperCase()}
-                    </Badge>
-                  </td>
-                  <td>
-                    <Badge variant={u.is_active ? 'success' : 'error'} dot size="sm">
-                      {u.is_active ? 'Active' : 'Suspended'}
-                    </Badge>
-                  </td>
-                  <td>
-                    {u.role !== 'admin' && (
-                      <button
-                        type="button"
-                        className={`curasync-btn curasync-btn--sm ${u.is_active ? 'curasync-btn--danger' : 'curasync-btn--secondary'}`}
-                        onClick={() => handleToggleUser(u.id, u.is_active)}
-                      >
-                        {u.is_active ? 'Suspend' : 'Activate'}
-                      </button>
-                    )}
-                  </td>
+          <div className="curasync-table-container">
+            <table className="curasync-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Contact</th>
+                  <th>Role</th>
+                  <th>Status</th>
+                  <th>Actions</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {users.map((u) => (
+                  <tr key={u.id}>
+                    <td>#{u.id}</td>
+                    <td><strong>{u.name}</strong></td>
+                    <td>{u.email || u.phone || 'N/A'}</td>
+                    <td>
+                      <Badge variant={u.role === 'doctor' ? 'info' : u.role === 'admin' ? 'privacy' : 'neutral'} size="sm">
+                        {u.role.toUpperCase()}
+                      </Badge>
+                    </td>
+                    <td>
+                      <Badge variant={u.is_active ? 'success' : 'error'} dot size="sm">
+                        {u.is_active ? 'Active' : 'Suspended'}
+                      </Badge>
+                    </td>
+                    <td>
+                      {u.role !== 'admin' && (
+                        <button
+                          type="button"
+                          className={`curasync-btn curasync-btn--sm ${u.is_active ? 'curasync-btn--danger' : 'curasync-btn--secondary'}`}
+                          onClick={() => handleToggleUser(u.id, u.is_active)}
+                        >
+                          {u.is_active ? 'Suspend' : 'Activate'}
+                        </button>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </Card>
       )}
 
@@ -234,41 +236,43 @@ export const AdminDashboard = () => {
             Immutable audit record of all doctor access sessions and token validations.
           </p>
 
-          <table className="curasync-table">
-            <thead>
-              <tr>
-                <th>Log ID</th>
-                <th>Practitioner</th>
-                <th>Clinic</th>
-                <th>IP Address</th>
-                <th>Timestamp</th>
-                <th>Scope</th>
-              </tr>
-            </thead>
-            <tbody>
-              {auditLogs.map((log) => (
-                <tr key={log.id}>
-                  <td>#{log.id}</td>
-                  <td><strong>{log.doctor_name}</strong></td>
-                  <td>{log.clinic_name || 'In-Person Consultation'}</td>
-                  <td><code>{log.ip_address}</code></td>
-                  <td>
-                    {new Date(log.accessed_at).toLocaleDateString('en-IN', { day: '2-digit', month: 'short' })} •{' '}
-                    {new Date(log.accessed_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                  </td>
-                  <td>
-                    <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
-                      {(log.resources || []).map((r, i) => (
-                        <span key={i} className="curasync-badge curasync-badge--neutral curasync-badge--sm">
-                          {typeof r === 'string' ? r.replace(/_/g, ' ') : 'Record'}
-                        </span>
-                      ))}
-                    </div>
-                  </td>
+          <div className="curasync-table-container">
+            <table className="curasync-table">
+              <thead>
+                <tr>
+                  <th>Log ID</th>
+                  <th>Practitioner</th>
+                  <th>Clinic</th>
+                  <th>IP Address</th>
+                  <th>Timestamp</th>
+                  <th>Scope</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {auditLogs.map((log) => (
+                  <tr key={log.id}>
+                    <td>#{log.id}</td>
+                    <td><strong>{log.doctor_name}</strong></td>
+                    <td>{log.clinic_name || 'In-Person Consultation'}</td>
+                    <td><code>{log.ip_address}</code></td>
+                    <td>
+                      {new Date(log.accessed_at).toLocaleDateString('en-IN', { day: '2-digit', month: 'short' })} •{' '}
+                      {new Date(log.accessed_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                    </td>
+                    <td>
+                      <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
+                        {(log.resources || []).map((r, i) => (
+                          <span key={i} className="curasync-badge curasync-badge--neutral curasync-badge--sm">
+                            {typeof r === 'string' ? r.replace(/_/g, ' ') : 'Record'}
+                          </span>
+                        ))}
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </Card>
       )}
     </AdminLayout>

@@ -34,33 +34,38 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-4) 0;
+  gap: clamp(4px, 1.8vw, 8px);
+  padding: var(--space-4) var(--space-2);
   background-color: var(--color-surface);
   border-radius: var(--radius-lg);
   border: 2px solid var(--color-privacy-border);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .curasync-token-card__digit {
-  width: 44px;
-  height: 54px;
+  width: clamp(36px, 11vw, 46px);
+  height: clamp(46px, 13vw, 56px);
   background-color: #FAF5FF;
   border: 1.5px solid var(--color-privacy);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.75rem;
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
   font-weight: 800;
   color: var(--color-privacy);
   font-variant-numeric: tabular-nums;
   box-shadow: var(--shadow-sm);
+  box-sizing: border-box;
 }
 
 .curasync-token-card__meta-grid {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: var(--space-2);
   font-size: var(--font-size-sm);
 }
 

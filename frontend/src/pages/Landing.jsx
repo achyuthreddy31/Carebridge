@@ -11,7 +11,6 @@ import {
   XCircle, 
   ArrowRight, 
   CheckCircle2, 
-  Sparkles, 
   Activity,
   Stethoscope,
   ChevronRight
@@ -42,11 +41,6 @@ export const Landing = () => {
       {/* Hero Section */}
       <header className="curasync-landing__hero">
         <div className="container curasync-landing__hero-inner">
-          <div className="curasync-landing__hero-badge">
-            <Sparkles size={14} />
-            <span>Smart India Hackathon 2026 • Problem #26198</span>
-          </div>
-
           <h1 className="curasync-landing__hero-title">
             Your health data.<br />
             <span className="curasync-landing__hero-highlight">Your control.</span><br />
@@ -54,7 +48,7 @@ export const Landing = () => {
           </h1>
 
           <p className="curasync-landing__hero-desc">
-            Curasync empowers patients to own and organize diagnostic records, prepare for doctor consultations with an AI clinical intake assistant, and securely share records with healthcare providers via temporary patient-controlled OTP access.
+            Carebridge empowers patients to own and organize diagnostic records, prepare for doctor consultations with an AI clinical intake assistant, and securely share records with healthcare providers via temporary patient-controlled OTP access.
           </p>
 
           <div className="curasync-landing__hero-cta">
@@ -137,7 +131,7 @@ export const Landing = () => {
             <span className="curasync-section-eyebrow">PATIENT SOVEREIGNTY</span>
             <h2 className="curasync-section-title">Your Data. Your Control.</h2>
             <p className="curasync-section-sub">
-              Healthcare data belongs to the patient. Curasync replaces permanent fragmented copies with temporary, auditable, patient-authorized access.
+              Healthcare data belongs to the patient. Carebridge replaces permanent fragmented copies with temporary, auditable, patient-authorized access.
             </p>
           </div>
 
@@ -159,7 +153,7 @@ export const Landing = () => {
             </div>
 
             <div className="curasync-ownership-card curasync-ownership-card--center">
-              <div className="curasync-health-wallet-badge">CURASYNC HEALTH WALLET</div>
+              <div className="curasync-health-wallet-badge">CAREBRIDGE HEALTH WALLET</div>
               <div className="curasync-health-wallet-chip">🔒 100% PRIVATE</div>
               <h4>Arjun Mehta</h4>
               <p>Blood Group: O+ | Age: 29</p>
@@ -198,7 +192,7 @@ export const Landing = () => {
         </div>
       </section>
 
-      {/* Core Innovation Matrix: The Problem vs Curasync Solution */}
+      {/* Core Innovation Matrix: The Problem vs Carebridge Solution */}
       <section id="how-it-works" className="curasync-comparison-section">
         <div className="container">
           <div className="curasync-section-header">
@@ -219,7 +213,7 @@ export const Landing = () => {
             </div>
 
             <div className="curasync-comparison-col curasync-comparison-col--curasync">
-              <h3 className="curasync-comparison-col-title">The Curasync Model</h3>
+              <h3 className="curasync-comparison-col-title">The Carebridge Model</h3>
               <ul className="curasync-comparison-list">
                 <li>✓ Intelligent OCR structures PDF and image reports into clean data tables</li>
                 <li>✓ AI Intake Assistant compiles clinical SOAP summaries before consultation</li>

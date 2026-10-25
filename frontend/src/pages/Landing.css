@@ -28,6 +28,18 @@
   gap: var(--space-4);
 }
 
+@media (max-width: 640px) {
+  .curasync-landing__nav {
+    height: 64px;
+  }
+  .curasync-landing__doctor-link span {
+    display: none;
+  }
+  .curasync-landing__nav-actions {
+    gap: var(--space-2);
+  }
+}
+
 .curasync-landing__doctor-link {
   display: inline-flex;
   align-items: center;
@@ -59,23 +71,8 @@
   align-items: center;
 }
 
-.curasync-landing__hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background-color: var(--color-surface);
-  border: 1.5px solid var(--color-accent);
-  color: var(--color-accent-dark);
-  padding: 4px 14px;
-  border-radius: var(--radius-full);
-  font-size: var(--font-size-xs);
-  font-weight: 700;
-  margin-bottom: var(--space-6);
-  box-shadow: var(--shadow-sm);
-}
-
 .curasync-landing__hero-title {
-  font-size: 2.25rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   color: var(--color-primary);
   line-height: 1.15;
@@ -101,6 +98,35 @@
   line-height: 1.6;
   max-width: 680px;
   margin-bottom: var(--space-8);
+}
+
+@media (max-width: 640px) {
+  .curasync-landing__hero {
+    padding: var(--space-8) 0 var(--space-10) 0;
+  }
+  .curasync-landing__hero-desc {
+    font-size: 0.95rem;
+    margin-bottom: var(--space-6);
+  }
+  .curasync-landing__hero-cta {
+    width: 100%;
+    flex-direction: column;
+  }
+  .curasync-landing__hero-cta a,
+  .curasync-landing__hero-cta button {
+    width: 100%;
+  }
+  .curasync-dataflow {
+    padding: var(--space-4) !important;
+  }
+  .curasync-dataflow__track {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: var(--space-3) !important;
+  }
+  .curasync-dataflow__arrow {
+    display: none !important;
+  }
 }
 
 .curasync-landing__hero-cta {
@@ -223,9 +249,37 @@
   align-items: center;
 }
 
+@media (min-width: 600px) and (max-width: 899px) {
+  .curasync-ownership-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .curasync-ownership-card--center {
+    grid-column: span 2;
+  }
+}
+
 @media (min-width: 900px) {
   .curasync-ownership-grid {
     grid-template-columns: 1fr 1fr 1.2fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .curasync-ownership-section,
+  .curasync-comparison-section,
+  .curasync-moments-section {
+    padding: var(--space-10) 0;
+  }
+  .curasync-section-title {
+    font-size: 1.6rem;
+  }
+  .curasync-comparison-col {
+    padding: var(--space-4) !important;
+  }
+  .curasync-landing__footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3);
   }
 }
 

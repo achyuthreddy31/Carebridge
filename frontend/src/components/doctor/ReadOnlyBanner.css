@@ -35,7 +35,12 @@
   letter-spacing: 0.02em;
 }
 
-.curasync-readonly-banner__lock {
+.curasync-readonly-banner__title {
+  display: inline-block;
+}
+
+.curasync-readonly-banner__lock,
+.curasync-readonly-banner__clock {
   flex-shrink: 0;
 }
 

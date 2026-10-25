@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Mail, Lock, Stethoscope, ArrowRight, Sparkles } from 'lucide-react';
+import { Mail, Lock, Stethoscope, ArrowRight } from 'lucide-react';
 import { Logo } from '../../components/shared/Logo';
 import { Button } from '../../components/ui/Button';
 import { Input } from '../../components/ui/Input';
@@ -66,21 +66,13 @@ export const DoctorLogin = () => {
         </div>
 
         {/* Demo Fast Fills */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '1rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '1.25rem' }}>
           <div className="curasync-auth-demo-box" onClick={handleFillDemoDoctor} style={{ margin: 0 }}>
-            <div className="curasync-auth-demo-header">
-              <Sparkles size={14} />
-              <span>SIH DEMO: DOCTOR LOGIN</span>
-            </div>
-            <p>Click to auto-fill: <strong>doctor@curasync.com</strong> / <strong>Doctor@123</strong></p>
+            <p>Click to auto-fill Doctor credentials (<strong>doctor@curasync.com</strong> / <strong>Doctor@123</strong>)</p>
           </div>
 
           <div className="curasync-auth-demo-box" onClick={handleFillDemoAdmin} style={{ margin: 0, backgroundColor: '#FAF5FF', borderColor: '#DDD6FE' }}>
-            <div className="curasync-auth-demo-header" style={{ color: '#7C3AED' }}>
-              <Sparkles size={14} />
-              <span>SIH DEMO: ADMIN LOGIN</span>
-            </div>
-            <p style={{ color: '#6D28D9' }}>Click to auto-fill: <strong>admin@curasync.com</strong> / <strong>Admin@123</strong></p>
+            <p style={{ color: '#6D28D9' }}>Click to auto-fill Admin credentials (<strong>admin@curasync.com</strong> / <strong>Admin@123</strong>)</p>
           </div>
         </div>
 

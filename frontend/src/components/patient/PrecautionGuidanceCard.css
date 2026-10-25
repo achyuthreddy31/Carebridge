@@ -1,0 +1,378 @@
+.curasync-precaution-container {
+  width: 100%;
+  margin-top: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Emergency Priority Alert Banner */
+.curasync-emergency-banner {
+  background: linear-gradient(135deg, #7F1D1D 0%, #991B1B 100%);
+  color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-5);
+  box-shadow: 0 10px 25px -5px rgba(220, 38, 38, 0.4), 0 8px 10px -6px rgba(220, 38, 38, 0.3);
+  border: 2px solid #EF4444;
+  animation: pulse-border 2.5s infinite;
+}
+
+@keyframes pulse-border {
+  0%, 100% { border-color: #EF4444; }
+  50% { border-color: #FCA5A5; }
+}
+
+.curasync-emergency-banner__icon {
+  background: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.curasync-emergency-banner__content {
+  flex: 1;
+}
+
+.curasync-emergency-banner__tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #FECACA;
+  margin-bottom: 4px;
+}
+
+.curasync-emergency-banner__title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 0 var(--space-2) 0;
+  letter-spacing: -0.01em;
+}
+
+.curasync-emergency-banner__desc {
+  font-size: var(--font-size-sm);
+  color: #FEE2E2;
+  line-height: 1.5;
+  margin: 0 0 var(--space-4) 0;
+}
+
+.curasync-emergency-banner__action {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.curasync-emergency-banner__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #FFFFFF;
+  color: #991B1B;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.curasync-emergency-banner__btn:hover {
+  background-color: #FEF2F2;
+  transform: translateY(-1px);
+}
+
+.curasync-emergency-banner__subnote {
+  font-size: var(--font-size-xs);
+  color: #FECACA;
+}
+
+/* Precaution Card */
+.curasync-precaution-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.curasync-precaution-card__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border-light);
+  margin-bottom: var(--space-5);
+}
+
+.curasync-precaution-card__title-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.curasync-precaution-card__icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-accent-subtle);
+  color: var(--color-accent-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.curasync-precaution-card__title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.curasync-precaution-card__subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin: 2px 0 0 0;
+}
+
+/* Badges */
+.curasync-precaution-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.curasync-precaution-badge--emergency {
+  background-color: #FEE2E2;
+  color: #991B1B;
+  border: 1px solid #F87171;
+}
+
+.curasync-precaution-badge--urgent {
+  background-color: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FCD34D;
+}
+
+.curasync-precaution-badge--prompt {
+  background-color: #E0F2FE;
+  color: #0369A1;
+  border: 1px solid #7DD3FC;
+}
+
+.curasync-precaution-badge--routine {
+  background-color: #ECFDF5;
+  color: #047857;
+  border: 1px solid #6EE7B7;
+}
+
+/* Sections */
+.curasync-precaution-section {
+  margin-bottom: var(--space-5);
+}
+
+.curasync-precaution-section__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: var(--space-3);
+}
+
+.curasync-precaution-section__header h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.curasync-precaution-icon--info { color: #0284C7; }
+.curasync-precaution-icon--success { color: #16A34A; }
+.curasync-precaution-icon--danger { color: #DC2626; }
+.curasync-precaution-icon--warning { color: #D97706; }
+.curasync-precaution-icon--step { color: var(--color-accent-dark); }
+
+/* Section A: Understanding */
+.curasync-precaution-understanding-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  margin: 0;
+  background-color: var(--color-surface-alt);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-accent);
+}
+
+.curasync-precaution-missing-alert {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #FFFBEB;
+  border: 1px dashed #FCD34D;
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  margin-top: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: #B45309;
+}
+
+/* Grid for Dos and Don'ts */
+.curasync-precaution-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  margin-bottom: var(--space-5);
+}
+
+@media (min-width: 768px) {
+  .curasync-precaution-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.curasync-precaution-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.curasync-precaution-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  background-color: #F8FAFC;
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-light);
+}
+
+.curasync-precaution-item__dot {
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.curasync-precaution-item__dot--success {
+  background-color: #DCFCE7;
+  color: #16A34A;
+}
+
+.curasync-precaution-item__dot--danger {
+  background-color: #FEE2E2;
+  color: #DC2626;
+}
+
+/* Warnings */
+.curasync-precaution-item--warning {
+  background-color: #FFFBEB;
+  border-color: #FDE68A;
+  color: #92400E;
+}
+
+.curasync-warning-bullet {
+  color: #D97706;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* Next Step Box */
+.curasync-precaution-nextstep-box {
+  background: linear-gradient(135deg, #ECFDF5 0%, #F0FDF4 100%);
+  border: 1px solid #A7F3D0;
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+}
+
+.curasync-precaution-nextstep-text {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: #065F46;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Disclaimer */
+.curasync-precaution-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background-color: #F1F5F9;
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-top: var(--space-4);
+}
+
+.curasync-precaution-disclaimer svg {
+  color: #64748B;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .curasync-emergency-banner {
+    flex-direction: column;
+    padding: var(--space-4);
+    gap: var(--space-3);
+  }
+  
+  .curasync-emergency-banner__icon {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .curasync-emergency-banner__title {
+    font-size: 1.1rem;
+  }
+  
+  .curasync-emergency-banner__btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .curasync-precaution-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .curasync-precaution-card__badge-wrap {
+    width: 100%;
+  }
+  
+  .curasync-precaution-badge {
+    width: 100%;
+    justify-content: center;
+  }
+}

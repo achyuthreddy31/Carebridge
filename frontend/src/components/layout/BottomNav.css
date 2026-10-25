@@ -32,6 +32,14 @@
   flex: 1;
   height: 100%;
   transition: color var(--transition-fast);
+  padding: 4px 0;
+}
+
+.curasync-bottom-nav__label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  line-height: 1.1;
+  white-space: nowrap;
 }
 
 .curasync-bottom-nav__icon-wrap {

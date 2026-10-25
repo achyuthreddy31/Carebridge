@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Phone, ArrowRight, ShieldCheck, Sparkles } from 'lucide-react';
+import { Phone, ArrowRight } from 'lucide-react';
 import { Logo } from '../../components/shared/Logo';
 import { Button } from '../../components/ui/Button';
 import { Input } from '../../components/ui/Input';
@@ -60,12 +60,8 @@ export const PatientLogin = () => {
           </p>
         </div>
 
-        {/* SIH Demo Helper Badge */}
+        {/* Demo Autofill Helper */}
         <div className="curasync-auth-demo-box" onClick={handleFillDemo}>
-          <div className="curasync-auth-demo-header">
-            <Sparkles size={14} />
-            <span>SIH DEMO ONE-CLICK FILL</span>
-          </div>
           <p>Click here to auto-fill sample patient mobile (<strong>9876543210</strong>)</p>
         </div>
 

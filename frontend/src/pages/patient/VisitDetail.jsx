@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Share2, MessageSquare, Bot, ChevronDown, ChevronUp } from 'lucide-react';
 import { PageLayout } from '../../components/layout/PageLayout';
 import { VisitSummaryCard } from '../../components/patient/VisitSummaryCard';
+import { PrecautionGuidanceCard } from '../../components/patient/PrecautionGuidanceCard';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Skeleton } from '../../components/ui/Skeleton';
@@ -59,7 +60,7 @@ export const VisitDetail = () => {
           </span>
           <h1 className="curasync-page-header__title">{visit?.title}</h1>
           <p className="curasync-page-header__desc">
-            Compiled on {new Date(visit?.created_at).toLocaleDateString('en-IN', { day: '2-digit', month: 'long', year: 'numeric' })} via Curasync Clinical Intake Assistant
+            Compiled on {new Date(visit?.created_at).toLocaleDateString('en-IN', { day: '2-digit', month: 'long', year: 'numeric' })} via Carebridge Clinical Intake Assistant
           </p>
         </div>
 
@@ -80,6 +81,13 @@ export const VisitDetail = () => {
         redFlags={visit?.red_flags}
         patientDescription={visit?.summary?.patient_own_description}
       />
+
+      {/* Pre-Consultation Precautions Guidance */}
+      {(visit?.precautions || visit?.summary?.precautions) && (
+        <PrecautionGuidanceCard
+          precautions={visit?.precautions || visit?.summary?.precautions}
+        />
+      )}
 
       {/* Collapsible Chat Transcript */}
       <Card variant="default" padding="md" style={{ marginTop: '1.5rem' }}>

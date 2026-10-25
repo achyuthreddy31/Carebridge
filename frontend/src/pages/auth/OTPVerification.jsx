@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
-import { ShieldCheck, ArrowRight, RotateCw, Sparkles } from 'lucide-react';
+import { ShieldCheck, ArrowRight, RotateCw } from 'lucide-react';
 import { Logo } from '../../components/shared/Logo';
 import { Button } from '../../components/ui/Button';
 import { OTPInput } from '../../components/ui/OTPInput';
@@ -33,7 +33,7 @@ export const OTPVerification = () => {
     setError('');
     try {
       await loginWithOTP(phone, otp);
-      addToast('Secure session established. Welcome to Curasync!', 'success');
+      addToast('Secure session established. Welcome to Carebridge!', 'success');
       navigate('/patient/dashboard');
     } catch (err) {
       const msg = err.response?.data?.detail || 'Invalid or expired OTP code.';
@@ -69,10 +69,6 @@ export const OTPVerification = () => {
 
         {/* Demo Helper Pill */}
         <div className="curasync-auth-demo-box">
-          <div className="curasync-auth-demo-header">
-            <Sparkles size={14} />
-            <span>SIH DEMO OTP DISPATCHED</span>
-          </div>
           <p>
             Your demo verification code is <strong>{initialDemoOtp}</strong> (Auto-filled for testing)
           </p>

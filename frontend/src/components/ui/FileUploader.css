@@ -31,6 +31,14 @@
   padding: var(--space-6) var(--space-4);
 }
 
+.curasync-uploader__prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .curasync-uploader__icon-wrap {
   width: 60px;
   height: 60px;

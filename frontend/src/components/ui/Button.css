@@ -20,15 +20,17 @@
 
 /* Sizes */
 .curasync-btn--sm {
-  padding: 0.4rem 0.75rem;
+  padding: 0.45rem 0.85rem;
   font-size: var(--font-size-sm);
   gap: var(--space-1);
+  min-height: 38px;
 }
 
 .curasync-btn--md {
-  padding: 0.6rem 1.2rem;
+  padding: 0.65rem 1.25rem;
   font-size: var(--font-size-base);
   gap: var(--space-2);
+  min-height: 44px;
 }
 
 .curasync-btn--lg {
@@ -36,10 +38,31 @@
   font-size: var(--font-size-md);
   gap: var(--space-3);
   font-weight: 600;
+  min-height: 48px;
 }
 
 .curasync-btn--full {
   width: 100%;
+}
+
+.curasync-btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.curasync-btn__icon--left {
+  margin-right: 2px;
+}
+
+.curasync-btn__icon--right {
+  margin-left: 2px;
+}
+
+.curasync-btn__text {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 /* Variants */

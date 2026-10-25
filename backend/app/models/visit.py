@@ -34,6 +34,9 @@ class Visit(Base):
     red_flags = Column(JSON, default=list)
     has_red_flags = Column(Boolean, default=False)
     
+    # Pre-consultation conservative precautions and safety guidance
+    precautions = Column(JSON, nullable=True)
+    
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
     completed_at = Column(DateTime, nullable=True)
 
@@ -50,10 +53,11 @@ class ChatMessage(Base):
     role = Column(String(20), nullable=False)  # assistant, user, system
     content = Column(Text, nullable=False)
     
-    # Optional structured payload (e.g. quick chips options, red-flag warning alert)
+    # Optional structured payload (e.g. quick chips options, red-flag warning alert, precautions)
     options = Column(JSON, nullable=True)     # e.g. ["Headache", "Cough", "Fever", "Other"]
     step = Column(String(50), nullable=True)   # Current conversation milestone
     is_red_flag = Column(Boolean, default=False)
+    precautions = Column(JSON, nullable=True)
     
     timestamp = Column(DateTime, default=datetime.datetime.utcnow)
 

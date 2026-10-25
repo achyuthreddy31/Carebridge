@@ -49,7 +49,7 @@ export const NewVisit = () => {
           <span className="curasync-page-header__eyebrow">SIGNATURE EXPERIENCE 2</span>
           <h1 className="curasync-page-header__title">AI Intake Assistant</h1>
           <p className="curasync-page-header__desc">
-            "Let's prepare your visit." Curasync guides you through structured clinical questions to compile a clear SOAP summary for your doctor, saving 10-15 minutes of consultation time.
+            "Let's prepare your visit." Carebridge guides you through structured clinical questions to compile a clear SOAP summary for your doctor, saving 10-15 minutes of consultation time.
           </p>
         </div>
       </div>
